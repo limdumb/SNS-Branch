@@ -88,8 +88,8 @@
 ---
 
 - **컴포넌트 개발순서**
-    - [ ] 공용 Button 생성
-    - [ ] 공용 Input 생성
+    - [X] 공용 Button 생성
+    - [X] 공용 Input 생성
     - [ ] 공용 Logo Component 생성
     - [ ] Footer Component 구현
     - [ ] Aside Bar Component 구현
