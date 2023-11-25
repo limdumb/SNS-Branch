@@ -84,3 +84,13 @@
     - [ ]  유저는 이메일로 로그인이 가능하다
 - 예외처리
     - [ ]  만약 비밀번호나 아이디가 맞지 않는다면 Modal로 에러문구와 함께 노출한다
+
+---
+
+- **컴포넌트 개발순서**
+    - [ ] 공용 Button 생성
+    - [ ] 공용 Input 생성
+    - [ ] 공용 Logo Component 생성
+    - [ ] Footer Component 구현
+    - [ ] Aside Bar Component 구현
+    - [ ] Profile Image Component 구현
