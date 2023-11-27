@@ -1,6 +1,5 @@
 import { nobile } from "@/font";
 import styles from "./style/submitButton.module.css";
-import { useState } from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
