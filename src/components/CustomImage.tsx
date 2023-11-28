@@ -1,8 +1,6 @@
 import Image from "next/image";
 
 interface ImageProps {
-  width: number;
-  height: number;
   imageURL: string;
   alt: string;
 }
@@ -10,8 +8,7 @@ interface ImageProps {
 export default function CustomImage(props: ImageProps) {
   return (
     <Image
-      width={props.width}
-      height={props.height}
+      style={{ width: "100%", height: "100%" }}
       src={props.imageURL}
       alt={props.alt}
     />
