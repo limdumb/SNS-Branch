@@ -10,8 +10,6 @@ import style from "./style/logo.module.css";
 import { kanit } from "@/font";
 
 interface LogoProps {
-  width: number;
-  height: number;
   fontWeight: string;
   navigateRoute: string;
   fontSize: number;
@@ -20,8 +18,6 @@ interface LogoProps {
 
 export default function Logo(props: LogoProps) {
   const logoStyle = {
-    width: props.width,
-    height: props.height,
     fontWeight: props.fontWeight,
     navigateRoute: props.navigateRoute,
     backgroundColor: props.backgroundColor,
