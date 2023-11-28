@@ -3,8 +3,8 @@ import style from "./style/commonInput.module.css";
 
 interface InputProps {
   placeholder: string;
-  width: number;
-  height: number;
+  width: string;
+  height: string;
   type: "text" | "password";
   valueType: "id" | "password" | "nickName" | "name" | "email";
   inputValue: string;
@@ -13,8 +13,8 @@ interface InputProps {
 
 export default function CommonInput(props: InputProps) {
   const inputStyle = {
-    width: `${props.width}px`,
-    height: `${props.height}px`,
+    width: `${props.width}`,
+    height: `${props.height}`,
   };
 
   return (
