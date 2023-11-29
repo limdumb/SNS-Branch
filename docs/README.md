@@ -91,8 +91,8 @@
     - [X] 공용 Button 생성
     - [X] 공용 Input 생성
     - [X] 공용 Logo Component 생성
-    - [ ] Login Box 생성
-    - [ ] Sign Up Box 생성
-    - [ ] Auth Navigate Box 생성
-    - [ ] Aside Bar Component 구현
+    - [X] Login Box 생성
+    - [X] Sign Up Box 생성
+    - [X] Auth Navigate Box 생성
+    - [X] Aside Bar Component 구현
     - [ ] Profile Image Component 구현
