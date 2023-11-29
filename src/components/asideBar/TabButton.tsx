@@ -3,7 +3,7 @@ import style from "./style/tabButton.module.css";
 import { signika } from "@/font";
 
 interface TabButtonProps {
-  contents: "Home" | "Friends" | "Commercial" | "Profile" | "Messages";
+  contents: string
 }
 
 export default function TabButton(props: TabButtonProps) {
@@ -16,7 +16,7 @@ export default function TabButton(props: TabButtonProps) {
           return el.icon;
         }
       })}
-      <button className={style.Tab_Button_Container}>{props.contents}</button>
+      <button className={style.Tab_Button_Wrapper}>{props.contents}</button>
     </div>
   );
 }
