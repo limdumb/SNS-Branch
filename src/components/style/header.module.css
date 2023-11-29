@@ -1,0 +1,12 @@
+.Header_Container {
+  width: 100%;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  position: fixed;
+  border-bottom: 1px solid #dbdbdb;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}

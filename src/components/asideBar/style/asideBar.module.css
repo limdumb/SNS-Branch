@@ -4,7 +4,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  border-right: 2px solid #dbdbdb ;
+  border-right: 2px solid #dbdbdb;
+  position: fixed;
 }
 
 .Logo_Container {
