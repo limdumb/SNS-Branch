@@ -1,0 +1,40 @@
+.Post_Container {
+  width: calc(100% - 250px);
+  height: 140px;
+  border-bottom: 1px solid #bdbdbd;
+  margin-top: 50px;
+  padding: 20px 20px 20px 30px;
+  position: fixed;
+}
+
+.Post_Contents_Wrapper {
+  display: flex;
+  height: 80%;
+}
+
+.Image_Container {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.Input_Container {
+  width: 100%;
+  height: 90%;
+}
+
+.Write_Area_Contents{
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+}
+
+.Write_Area_Contents:focus{
+  outline: none;
+}
+
+.Submit_Button_Wrapper{
+  display: flex;
+  justify-content: flex-end;
+}
