@@ -95,4 +95,4 @@
     - [X] Sign Up Box 생성
     - [X] Auth Navigate Box 생성
     - [X] Aside Bar Component 구현
-    - [ ] Profile Image Component 구현
+    - [X] Profile Image Component 구현
