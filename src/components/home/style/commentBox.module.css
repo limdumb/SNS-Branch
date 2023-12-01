@@ -1,0 +1,40 @@
+.Comment_Box_Container {
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.Comment_User_Profile_Wrapper {
+  display: flex;
+  align-items: center;
+  width: 17%;
+  margin-right: 10px;
+}
+
+.Image_Wrapper {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 13px;
+}
+
+.Comment_Contents_Wrapper {
+  height: auto; 
+  max-width: 83%; 
+  background-color: #a8a8a8;
+  border-radius: 5px;
+  padding: 1px 5px;
+  display: flex;
+  align-items: center;
+  min-width: 83%;
+  min-height: 50px
+}
+
+.Comment_Contents {
+  display: flex;
+  width: 100%;
+  word-break: break-all; 
+  min-width: 100%;
+  min-height: 100%;
+}

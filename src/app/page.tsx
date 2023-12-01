@@ -1,5 +1,18 @@
 "use client";
 
+import PostCard from "@/components/home/PostCard";
+
 export default function Home() {
-  return <div>안녕하세요</div>;
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        width: "100%",
+        padding: "20px 30px",
+      }}
+    >
+      <PostCard />
+    </div>
+  );
 }

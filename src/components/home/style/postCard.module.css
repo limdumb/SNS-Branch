@@ -1,0 +1,78 @@
+.Post_Box_Wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Post_Card_Container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #dbdbdb;
+  max-width: 1023px;
+  padding: 30px;
+}
+
+.Post_Profile_Container {
+  display: flex;
+  border-bottom: 1px solid #dbdbdb;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.Image_Wrapper {
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
+}
+
+.Post_Inner_Contents {
+  width: 100%;
+  margin: 20px 0px;
+  min-height: 100px;
+}
+
+.Reaction_Container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.Reaction_Container > :first-child {
+  margin-right: 15px;
+}
+
+.Comment_Box {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #dbdbdb;
+  border-top: none;
+}
+
+.Write_Comment_Box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 30px;
+  align-items: flex-end;
+}
+
+.Write_Input {
+  width: 100%;
+  height: auto;
+  background-color: #e8e8e8;
+  padding-left: 15px;
+  padding-top: 10px;
+  border-radius: 10px;
+  resize: none;
+  outline: none;
+}
+
+.Button_Wrapper {
+  height: 35px;
+  width: 80px;
+  margin-top: 10px;
+}

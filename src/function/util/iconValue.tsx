@@ -11,16 +11,16 @@ interface IconsType {
 
 export default function iconValue() {
   const result: IconsType[] = [
-    { name: "Home", icon: <AiFillHome size={35} color={"#325928"} /> },
-    { name: "Friends", icon: <FaUserFriends size={35} color={"#325928"} /> },
-    { name: "Commercial", icon: <FaShop size={35} color={"#325928"} /> },
+    { name: "Home", icon: <AiFillHome key={"Home"}size={35} color={"#325928"} /> },
+    { name: "Friends", icon: <FaUserFriends key={"Friends"}size={35} color={"#325928"} /> },
+    { name: "Commercial", icon: <FaShop key={"Commercial"}size={35} color={"#325928"} /> },
     {
       name: "Profile",
-      icon: <FaUserCircle size={35} color={"#325928"}></FaUserCircle>,
+      icon: <FaUserCircle key={"Profile"}size={35} color={"#325928"}></FaUserCircle>,
     },
     {
       name: "Messages",
-      icon: <TbMessages size={35} color={"#325928"}></TbMessages>,
+      icon: <TbMessages size={35}key={"Messages"} color={"#325928"}></TbMessages>,
     },
   ];
 

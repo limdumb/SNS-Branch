@@ -3,10 +3,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   width: 100%;
   height: 80px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .Button_Wrapper {
@@ -18,7 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   width: 80%;
   color: #325928;
   font-weight: bold;

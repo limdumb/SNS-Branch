@@ -3,6 +3,7 @@ import "./globals.css";
 import { inter } from "@/font";
 import AsideBar from "@/components/asideBar/AsideBar";
 import Header from "@/components/Header";
+import WritePostInput from "@/components/home/WritePostInput";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,11 +18,26 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true} className={inter.className}>
-        <div style={{ display: "flex" }}>
+        <div
+          style={{
+            display: "flex",
+            width: "1200px",
+            margin: "0 auto",
+            borderRight: "1px solid #bdbdbd",
+            minHeight:"100vh"
+          }}
+        >
           <AsideBar />
-          <div style={{ marginLeft: "250px" }}>
+          <div style={{ marginLeft: "150px", width: "100%" }}>
             <Header routes="/" />
-            <div style={{ marginTop: "50px" }}>{children}</div>
+            <WritePostInput />
+            <div
+              style={{
+                marginTop: "190px",
+              }}
+            >
+              {children}
+            </div>
           </div>
         </div>
       </body>
