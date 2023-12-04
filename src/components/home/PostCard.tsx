@@ -4,15 +4,20 @@ import CommentBox from "./CommentBox";
 import style from "./style/postCard.module.css";
 
 interface CommentType {
-  userId: number;
-  name: string;
-  imageUrl: string;
-  comment: string;
+  user: {
+    id: number;
+    nickName: string;
+    imageUrl: string;
+  };
+  contents: string;
 }
 
 interface PostCardProps {
-  profileImage: string;
-  name: string;
+  user: {
+    id: number;
+    nickName: string;
+    imageUrl: string;
+  };
   contents: string;
   likes: number;
   comments: CommentType[];
@@ -30,20 +35,22 @@ export default function PostCard() {
             <span>@dumb_Lim</span>
           </div>
         </div>
-
         <div className={style.Post_Inner_Contents}>
           <div>dd </div>
         </div>
-
         <div className={style.Reaction_Container}>
           <div>👍 Like</div>
           <div>💬 Comment</div>
         </div>
-
-        <div className={style.Comment_Box}></div>
       </div>
       <div className={style.Comment_Box}>
-        <div style={{ borderBottom: "1px solid #DBDBDB" , paddingLeft:"30px",paddingRight:"30px"}}>
+        <div
+          style={{
+            borderBottom: "1px solid #DBDBDB",
+            paddingLeft: "30px",
+            paddingRight: "30px",
+          }}
+        >
           <CommentBox />
         </div>
         <div className={style.Write_Comment_Box}>
