@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 
 interface ImageProps {
@@ -8,7 +9,7 @@ interface ImageProps {
 
 export default function CustomImage(props: ImageProps) {
   return (
-    <Image
+    <img
       style={{
         width: "100%",
         height: "100%",

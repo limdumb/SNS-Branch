@@ -1,4 +1,5 @@
 import { axiosInstance } from "@/api/instance";
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 interface UseFetchType {
@@ -21,11 +22,12 @@ export function useFetch<T>(fetchProps: UseFetchType): ResponseType<T> {
   useEffect(() => {
     const getFetchData = async () => {
       try {
-        const response = await axiosInstance.get(fetchProps.fetchUrl);
+        const response = await axios.get(
+          `http://localhost:3001${fetchProps.fetchUrl}`
+        );
         setData(response.data);
         setLoading(false);
       } catch (err) {
-
         if (err instanceof Error) {
           setError({
             code: 500,

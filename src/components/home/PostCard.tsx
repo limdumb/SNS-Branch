@@ -1,46 +1,31 @@
+import { PostCardType } from "@/app/home/page";
 import CustomImage from "../CustomImage";
 import SubmitButton from "../SubmitButton";
 import CommentBox from "./CommentBox";
 import style from "./style/postCard.module.css";
 
-interface CommentType {
-  user: {
-    id: number;
-    nickName: string;
-    imageUrl: string;
-  };
-  contents: string;
-}
-
-interface PostCardProps {
-  user: {
-    id: number;
-    nickName: string;
-    imageUrl: string;
-  };
-  contents: string;
-  likes: number;
-  comments: CommentType[];
-}
-
-export default function PostCard() {
+export default function PostCard(props: PostCardType) {
   return (
     <div className={style.Post_Box_Wrapper}>
       <div className={style.Post_Card_Container}>
         <div className={style.Post_Profile_Container}>
           <div className={style.Image_Wrapper}>
-            <CustomImage imageURL={""} alt={""} borderRadious="50%" />
+            <CustomImage
+              imageURL={props.user.imageUrl}
+              alt={""}
+              borderRadious="50%"
+            />
           </div>
           <div>
-            <span>@dumb_Lim</span>
+            <span>{props.user.nickName}</span>
           </div>
         </div>
         <div className={style.Post_Inner_Contents}>
-          <div>dd </div>
+          <span>{props.contents}</span>
         </div>
         <div className={style.Reaction_Container}>
-          <div>👍 Like</div>
-          <div>💬 Comment</div>
+          <span>👍 Like {props.likes}</span>
+          <div>💬 Comment {props.comments.length}</div>
         </div>
       </div>
       <div className={style.Comment_Box}>
@@ -51,7 +36,19 @@ export default function PostCard() {
             paddingRight: "30px",
           }}
         >
-          <CommentBox />
+          {props.comments.map((el, index) => {
+            return (
+              <CommentBox
+                key={index}
+                user={{
+                  id: el.user.id,
+                  nickName: el.user.nickName,
+                  imageUrl: el.user.imageUrl,
+                }}
+                comments={el.comments}
+              />
+            );
+          })}
         </div>
         <div className={style.Write_Comment_Box}>
           <textarea
