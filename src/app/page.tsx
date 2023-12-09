@@ -1,5 +1,7 @@
 "use client";
 
-export default function App() {
-  return <div></div>;
+import Home from "@/components/home/Home";
+
+export default function HomePage() {
+  return <Home/>
 }
