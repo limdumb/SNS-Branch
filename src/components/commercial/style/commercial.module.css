@@ -1,0 +1,5 @@
+.Commercial_Container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}

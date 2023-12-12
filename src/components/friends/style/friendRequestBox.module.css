@@ -1,5 +1,5 @@
-.Request_Box_Container{
-  background-color: #F2F2F2;
+.Request_Box_Container {
+  background-color: #f2f2f2;
   width: 90%;
   height: 80px;
   display: flex;
@@ -8,19 +8,33 @@
   justify-content: space-between;
 }
 
-.User_Profile_Container{
+.Button_Container {
+  height: 40px;
+  width: 80px;
+}
+
+.Button_Wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.Button_Wrapper > :first-child {
+  margin-right: 10px;
+}
+
+.User_Profile_Container {
   width: auto;
   display: flex;
   height: 100%;
   align-items: center;
 }
 
-.Image_Wrapper{
+.Image_Wrapper {
   width: 50px;
   height: 50px;
 }
 
-.NickName_Wrapper{
+.NickName_Wrapper {
   margin-left: 15px;
   font-size: 17px;
   font-weight: bold;

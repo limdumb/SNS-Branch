@@ -5,7 +5,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
 export default function SubmitButton(props: ButtonProps) {
   return (
-    <button className={`${styles.customButton} ${nobile.className}`} {...props}>
+    <button className={`${styles.Custom_Button} ${nobile.className}`} {...props}>
       {props.children}
     </button>
   );

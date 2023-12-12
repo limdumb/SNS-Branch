@@ -1,6 +1,7 @@
 import style from "./style/friendRequestBox.module.css";
 import { FriendsDataType } from "./Friends";
 import CustomImage from "../CustomImage";
+import SubmitButton from "../SubmitButton";
 
 export default function FrinedRequestBox(props: FriendsDataType) {
   return (
@@ -17,7 +18,14 @@ export default function FrinedRequestBox(props: FriendsDataType) {
           <span>{props.nickName}</span>
         </div>
       </div>
-      <div></div>
+      <div className={style.Button_Wrapper}>
+        <div className={style.Button_Container}>
+          <SubmitButton>수락</SubmitButton>
+        </div>
+        <div className={style.Button_Container}>
+          <SubmitButton>거절</SubmitButton>
+        </div>
+      </div>
     </div>
   );
 }
