@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { inter } from "@/font";
-import AsideBar from "@/components/asideBar/AsideBar";
-import Header from "@/components/Header";
-import WritePostInput from "@/components/home/WritePostInput";
 
 export const metadata: Metadata = {
   title: "Create Next App",

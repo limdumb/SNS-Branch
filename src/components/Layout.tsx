@@ -5,7 +5,8 @@ import { inter } from "@/font";
 import AsideBar from "@/components/asideBar/AsideBar";
 import Header from "@/components/Header";
 import WritePostInput from "@/components/home/WritePostInput";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,11 +14,37 @@ export const metadata: Metadata = {
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const pathValue = usePathname();
+
   const [tabValue, setTabValue] = useState("");
 
-  const getPathValue = (clickValue: string) => {
-    setTabValue(clickValue);
-  };
+  useEffect(() => {
+    const getPathValue = () => {
+      if (pathValue === "/") {
+        setTabValue("Home");
+      }
+
+      if (pathValue === "/friends") {
+        setTabValue("Frineds");
+      }
+
+      if (pathValue === "/commercial") {
+        setTabValue("Commercial");
+      }
+
+      if (pathValue === "/profile") {
+        setTabValue("Profile");
+      }
+
+      if (pathValue === "/messages") {
+        setTabValue("Messages");
+      }
+    };
+
+    getPathValue();
+  }, [pathValue]);
+
+  console.log(tabValue);
 
   return (
     <html lang="en">
@@ -31,9 +58,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             minHeight: "100vh",
           }}
         >
-          <AsideBar getPathValue={getPathValue} />
+          <AsideBar />
           <div style={{ marginLeft: "150px", width: "100%" }}>
-            <Header routes="/" />
+            <Header routes={tabValue} />
             <WritePostInput />
             <div
               style={{

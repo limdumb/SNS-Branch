@@ -5,7 +5,6 @@ import Link from "next/link";
 
 interface TabButtonProps {
   contents: string;
-  getPathValue: (clickValue: string) => void;
 }
 
 export default function TabButton(props: TabButtonProps) {
@@ -14,10 +13,7 @@ export default function TabButton(props: TabButtonProps) {
   return (
     <Link
       className={`${style.Tab_Button_Container} ${signika.className}`}
-      href={`/${
-        props.contents !== "Home" ? props.contents.toLowerCase() : ""
-      }`}
-      onClick={() => props.getPathValue(props.contents)}
+      href={`/${props.contents !== "Home" ? props.contents.toLowerCase() : ""}`}
     >
       {icons.map((el) => {
         if (el.name === props.contents) {
