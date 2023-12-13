@@ -44,8 +44,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     getPathValue();
   }, [pathValue]);
 
-  console.log(tabValue);
-
   return (
     <html lang="en">
       <body suppressHydrationWarning={true} className={inter.className}>

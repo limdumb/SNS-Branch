@@ -17,13 +17,12 @@ export default function Friends() {
   const { data, error, isLoading } = useFetch<FriendsDataType[]>({
     fetchUrl: "/friend",
   });
-  console.log(data);
 
   return (
     <Layout>
       <div className={style.Friend_Container}>
         <div className={style.Friend_Request_Count_Box}>
-          <span>친구요청 24건</span>
+          <span>친구요청 {data && data.length}건</span>
         </div>
         {!isLoading ? (
           <div className={style.Friend_Request_Wrapper}>

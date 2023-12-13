@@ -1,0 +1,31 @@
+.Profile_Box_Container {
+  width: 100%;
+  height: 160px;
+  padding: 20px 10px;
+  border-bottom: 2px solid #dbdbdb;
+  display: flex;
+  align-items: center;
+}
+
+.Profile_Image_Wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.Profile_Contants_Wrapper{
+  width: 80%;
+  height: 100%;
+  padding-left: 20px;
+}
+
+.NickName_Wrapper{
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.Information_Wrapper{
+  width: auto;
+  height: 60%;
+}
