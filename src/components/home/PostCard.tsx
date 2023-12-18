@@ -1,7 +1,7 @@
-import { PostCardType } from "@/app/home/page";
 import CustomImage from "../CustomImage";
 import SubmitButton from "../SubmitButton";
 import CommentBox from "./CommentBox";
+import { PostCardType } from "./Home";
 import style from "./style/postCard.module.css";
 
 export default function PostCard(props: PostCardType) {

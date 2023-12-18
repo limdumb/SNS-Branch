@@ -1,12 +1,21 @@
+"use client";
+
 import { useFetch } from "@/customHook/useFetch";
 import Layout from "../Layout";
 import ProfileBox from "./ProfileBox";
-import { useRouter } from "next/router";
+import { PostCardType } from "../home/Home";
 
-export default function Profile() {
-  const router = useRouter();
+interface ProfileDataType {
+  id: number;
+  nickName: string;
+  imageUrl: string;
+  intro: string;
+  posts: PostCardType;
+}
+
+export default function Profile({ id }: { id: string }) {
   const { data, isLoading, error } = useFetch({
-    fetchUrl: `/profile/${router.query.id}`,
+    fetchUrl: `/profile/${id}`,
   });
   return (
     <Layout>
