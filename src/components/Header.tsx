@@ -1,4 +1,3 @@
-import { lalezar } from "@/font";
 import style from "./style/header.module.css";
 
 interface HeaderProps {
@@ -7,7 +6,7 @@ interface HeaderProps {
 
 export default function Header(props: HeaderProps) {
   return (
-    <header className={`${style.Header_Container} ${lalezar.className}`}>
+    <header className={style.Header_Container}>
       {props.routes === "/" ? "HOME" : props.routes}
     </header>
   );

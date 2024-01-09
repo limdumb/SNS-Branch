@@ -7,12 +7,10 @@
 
 import Link from "next/link";
 import style from "./style/logo.module.css";
-import { kanit } from "@/font";
 
 interface LogoProps {
   fontWeight: string;
   navigateRoute: string;
-  fontSize: number;
   backgroundColor?: string;
 }
 
@@ -21,11 +19,10 @@ export default function Logo(props: LogoProps) {
     fontWeight: props.fontWeight,
     navigateRoute: props.navigateRoute,
     backgroundColor: props.backgroundColor,
-    fontSize: props.fontSize,
   };
 
   return (
-    <div style={logoStyle} className={`${style.mainLogo} ${kanit.className}`}>
+    <div style={logoStyle} className={style.mainLogo}>
       <Link href={props.navigateRoute}>Branch</Link>
     </div>
   );

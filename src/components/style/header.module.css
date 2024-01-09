@@ -1,12 +1,12 @@
 .Header_Container {
-  width: 1050px;
   height: 50px;
+  width: calc(100% - 13%);
   font-size: 30px;
   font-weight: bold;
   position: fixed;
   border-bottom: 1px solid #dbdbdb;
   border-right: 1px solid #dbdbdb;
-  padding-left: 20px;
+  padding-left: 15px;
   display: flex;
   align-items: center;
   background-color: white;

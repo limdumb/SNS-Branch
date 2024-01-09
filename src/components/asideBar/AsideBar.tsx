@@ -11,7 +11,7 @@ export default function AsideBar(props: AsideBarProps) {
   return (
     <aside className={style.Aside_Container}>
       <div className={style.Logo_Container}>
-        <Logo fontWeight={"bold"} navigateRoute={""} fontSize={30} />
+        <Logo fontWeight={"bold"} navigateRoute={""} />
       </div>
       {asideTabs.map((el) => {
         return (

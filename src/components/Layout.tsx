@@ -1,7 +1,6 @@
 "use client";
 
 import type { Metadata } from "next";
-import { inter } from "@/font";
 import AsideBar from "@/components/asideBar/AsideBar";
 import Header from "@/components/Header";
 import WritePostInput from "@/components/home/WritePostInput";
@@ -46,23 +45,23 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true} className={inter.className}>
+      <body suppressHydrationWarning={true}>
         <div
           style={{
             display: "flex",
-            width: "1200px",
-            margin: "0 auto",
+            width: "100%",
             borderRight: "1px solid #bdbdbd",
             minHeight: "100vh",
           }}
         >
           <AsideBar />
-          <div style={{ marginLeft: "150px", width: "100%" }}>
+          <div style={{ paddingLeft: "13%", width: "100%" }}>
             <Header routes={tabValue} />
             <WritePostInput />
             <div
               style={{
-                marginTop: "190px",
+                width: "100%",
+                marginTop: "150px",
               }}
             >
               {children}

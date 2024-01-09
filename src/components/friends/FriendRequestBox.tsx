@@ -2,7 +2,9 @@ import style from "./style/friendRequestBox.module.css";
 import { FriendsDataType } from "./Friends";
 import CustomImage from "../CustomImage";
 import SubmitButton from "../SubmitButton";
-
+// 레이아웃 재정비
+// height정비
+// 서버정비
 export default function FrinedRequestBox(props: FriendsDataType) {
   return (
     <div className={style.Request_Box_Container}>

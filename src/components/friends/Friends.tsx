@@ -18,6 +18,8 @@ export default function Friends() {
     fetchUrl: "/friend",
   });
 
+  console.log(data);
+
   return (
     <Layout>
       <div className={style.Friend_Container}>

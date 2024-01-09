@@ -27,8 +27,10 @@ export interface PostCardType {
 
 export default function Home() {
   const { data, isLoading, error } = useFetch<PostCardType[]>({
-    fetchUrl: "/post",
+    fetchUrl: "/posts",
   });
+
+  console.log(data);
 
   return (
     <Layout>
