@@ -1,0 +1,22 @@
+.Layout_Container {
+  display: flex;
+  width: 100%;
+  border-right: 1px solid #bdbdbd;
+  min-height: 100vh;
+}
+
+.Contents_Container {
+  width: 100%;
+  margin-top: 150px;
+}
+
+.Layout_Wrapper {
+  padding-left: 13%;
+  width: 100%;
+}
+
+@media screen and (max-width: 760px) {
+  .Layout_Wrapper {
+    padding: 0px;
+  }
+}

@@ -30,8 +30,6 @@ export default function Home() {
     fetchUrl: "/posts",
   });
 
-  console.log(data);
-
   return (
     <Layout>
       <div className={styles.Home_Container}>

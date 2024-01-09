@@ -19,7 +19,7 @@ export default function TabButton(props: TabButtonProps) {
           return el.icon;
         }
       })}
-      <button className={style.Tab_Button_Wrapper}>{props.contents}</button>
+      <span className={style.Tab_Button_Wrapper}>{props.contents}</span>
     </Link>
   );
 }

@@ -16,3 +16,9 @@
   border-bottom: 1px solid #dbdbdb;
   font-size: 10px;
 }
+
+@media screen and (max-width: 780px) {
+  .Aside_Container{
+    display: none;
+  }
+}

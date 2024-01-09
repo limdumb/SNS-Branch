@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import WritePostInput from "@/components/home/WritePostInput";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import styles from "./style/layout.module.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -46,26 +47,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        <div
-          style={{
-            display: "flex",
-            width: "100%",
-            borderRight: "1px solid #bdbdbd",
-            minHeight: "100vh",
-          }}
-        >
+        <div className={styles.Layout_Container}>
           <AsideBar />
-          <div style={{ paddingLeft: "13%", width: "100%" }}>
+          <div className={styles.Layout_Wrapper}>
             <Header routes={tabValue} />
             <WritePostInput />
-            <div
-              style={{
-                width: "100%",
-                marginTop: "150px",
-              }}
-            >
-              {children}
-            </div>
+            <div className={styles.Contents_Container}>{children}</div>
           </div>
         </div>
       </body>
