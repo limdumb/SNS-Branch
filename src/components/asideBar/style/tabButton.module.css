@@ -20,6 +20,7 @@
   width: 80%;
   color: #325928;
   font-weight: bold;
+  font-size: 0.7rem;
 }
 
 @media screen and (max-width: 760px) {
