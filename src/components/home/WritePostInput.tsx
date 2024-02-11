@@ -1,14 +1,21 @@
+import { ChangeEvent } from "react";
 import CustomImage from "../CustomImage";
 import SubmitButton from "../SubmitButton";
 import style from "./style/writePostInput.module.css";
+import { CreatePostType } from "../Layout";
+import { AxiosResponse } from "axios";
 
 interface WritePostInputProps {
   inputValue: string;
-  changeFunction: () => {};
-  submitFunction: () => {};
+  changeFunction: (e: ChangeEvent<HTMLTextAreaElement>) => void;
+  submitFunction: (
+    props: CreatePostType
+  ) => Promise<AxiosResponse<any, any> | undefined>;
+  postRequest: CreatePostType;
 }
 
-export default function WritePostInput() {
+export default function WritePostInput(props: WritePostInputProps) {
+  console.log(props.postRequest);
   return (
     <div className={style.Post_Container}>
       <div className={style.Post_Contents_Wrapper}>
@@ -19,13 +26,27 @@ export default function WritePostInput() {
           <textarea
             className={style.Write_Area_Contents}
             placeholder="어떤일이 일어나고있나요?"
-            // ( Value값, Change Function 적용 예정 )
+            value={props.inputValue}
+            onChange={(e) => {
+              props.changeFunction(e);
+            }}
           />
         </div>
       </div>
       <div className={style.Submit_Button_Wrapper}>
         <div style={{ width: "130px", height: "25px" }}>
-          <SubmitButton>작성하기</SubmitButton>
+          <SubmitButton
+            onClick={async () => {
+              const response = await props.submitFunction(props.postRequest);
+
+              if (response?.status === 201) {
+                alert("작성이 완료되었습니다.");
+                window.location.reload();
+              }
+            }}
+          >
+            작성하기
+          </SubmitButton>
         </div>
       </div>
     </div>
