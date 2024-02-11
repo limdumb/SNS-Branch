@@ -12,7 +12,7 @@ export default function Header(props: HeaderProps) {
       <div className={style.Header_Wrapper}>
         <span>{props.routes === "/" ? "HOME" : props.routes}</span>
         <div className={style.Icon_Wrapper}>
-          <IoIosMenu size={30} />
+          <IoIosMenu size={30} onClick={() => props.changeModalClicked()} />
         </div>
       </div>
     </header>

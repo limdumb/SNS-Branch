@@ -7,6 +7,7 @@ import WritePostInput from "@/components/home/WritePostInput";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./style/layout.module.css";
+import Modal from "./Modal";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -64,6 +65,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <WritePostInput />
             <div className={styles.Contents_Container}>{children}</div>
           </div>
+          {modalClicked ? (
+            <Modal changeModalClicked={changeModalClicked} />
+          ) : null}
         </div>
       )}
     </>
