@@ -12,8 +12,28 @@
   background-color: white;
 }
 
+.Header_Wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.Icon_Wrapper {
+  display: none;
+}
+
 @media screen and (max-width: 760px) {
   .Header_Container {
     width: 100%;
+    padding-right: 15px;
+  }
+
+  .Header_Wrapper > span {
+    display: block;
+  }
+
+  .Icon_Wrapper {
+    display: flex;
+    align-items: center;
   }
 }

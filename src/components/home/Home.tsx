@@ -4,7 +4,6 @@ import styles from "./style/home.module.css";
 import PostCard from "@/components/home/PostCard";
 import Spinner from "@/components/Spinner";
 import Layout from "../Layout";
-import styled from "styled-components";
 
 export interface CommentType {
   user: {

@@ -17,6 +17,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const pathValue = usePathname();
 
   const [tabValue, setTabValue] = useState("");
+  const [mounted, setMounted] = useState<boolean>(false);
+  const [modalClicked, setModalClicked] = useState(false);
+
+  const changeModalClicked = () => {
+    setModalClicked(!modalClicked);
+  };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const getPathValue = () => {
@@ -45,17 +55,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   }, [pathValue]);
 
   return (
-    <html lang="en">
-      <body suppressHydrationWarning={true}>
+    <>
+      {mounted && (
         <div className={styles.Layout_Container}>
           <AsideBar />
           <div className={styles.Layout_Wrapper}>
-            <Header routes={tabValue} />
+            <Header changeModalClicked={changeModalClicked} routes={tabValue} />
             <WritePostInput />
             <div className={styles.Contents_Container}>{children}</div>
           </div>
         </div>
-      </body>
-    </html>
+      )}
+    </>
   );
 }
