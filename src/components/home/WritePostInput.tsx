@@ -15,7 +15,6 @@ interface WritePostInputProps {
 }
 
 export default function WritePostInput(props: WritePostInputProps) {
-  console.log(props.postRequest);
   return (
     <div className={style.Post_Container}>
       <div className={style.Post_Contents_Wrapper}>
